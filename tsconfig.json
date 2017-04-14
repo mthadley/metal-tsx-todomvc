@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "preserve",
+        "alwaysStrict": true,
+        "allowJs": true,
+        "noUnusedLocals": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "target": "es6"
+    },
+    "include": [
+        "./src/*.ts"
+    ],
+    "exclude": [
+        "**/__tests__/*"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "isShellCommand": true,
+  "suppressTaskName": true,
+  "tasks": [
+    {
+      "taskName": "watch",
+      "command": "${workspaceRoot}/node_modules/.bin/webpack",
+      "args": ["--watch"],
+      "isBackground": true,
+      "isBuildCommand": true
+    }
+  ]
+}
