@@ -82,14 +82,18 @@ export default class App extends Component<{}, State> {
         </header>
 
         <section class="main">
-          <input
-            checked={this._allDone()}
-            class="toggle-all"
-            id="toggleAll"
-            onChange={this._handleToggleAll}
-            type="checkbox"
-          />
-          <label for="toggleAll">{'Mark all as complete'}</label>
+          {!!this.state.todos.length &&
+            <div>
+              <input
+                checked={this._allDone()}
+                class="toggle-all"
+                id="toggleAll"
+                onChange={this._handleToggleAll}
+                type="checkbox"
+              />
+              <label for="toggleAll">{'Mark all as complete'}</label>
+            </div>
+          }
 
           <ul class="todo-list">
             {this._getTodos().map(todo =>
@@ -103,14 +107,16 @@ export default class App extends Component<{}, State> {
           </ul>
         </section>
 
-        <Footer
-          filters={filters}
-          showClearButton={this._anyDone()}
-          onClear={this._handleClear}
-          onFilterChange={this._handleFilterChange}
-          selectedFilter={this.state.selectedFilter}
-          todoCount={this._countLeft()}
-        />
+        {!!this.state.todos.length &&
+          <Footer
+            filters={filters}
+            showClearButton={this._anyDone()}
+            onClear={this._handleClear}
+            onFilterChange={this._handleFilterChange}
+            selectedFilter={this.state.selectedFilter}
+            todoCount={this._countLeft()}
+          />
+        }
       </section>
     )
   }
