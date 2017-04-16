@@ -4387,10 +4387,7 @@ var App = function (_Component) {
             IncrementalDOM.elementVoid(_Create2.default, null, null, 'onCreate', this._handleCreate);
             IncrementalDOM.elementClose('header');
             IncrementalDOM.elementOpen('section', null, null, 'class', 'main');
-            IncrementalDOM.elementVoid('input', null, null, 'checked', this._allDone(), 'onChange', this._handleToggleAll, 'class', 'toggle-all', 'id', 'toggleAll', 'type', 'checkbox');
-            IncrementalDOM.elementOpen('label', null, null, 'for', 'toggleAll');
-            IncrementalDOM.text('Mark all as complete');
-            IncrementalDOM.elementClose('label');
+            iDOMHelpers.renderArbitrary(!!this.state.todos.length && (IncrementalDOM.elementOpen('div'), (IncrementalDOM.elementVoid('input', null, null, 'checked', this._allDone(), 'onChange', this._handleToggleAll, 'class', 'toggle-all', 'id', 'toggleAll', 'type', 'checkbox')), (IncrementalDOM.elementOpen('label', null, null, 'for', 'toggleAll'), IncrementalDOM.text('Mark all as complete'), IncrementalDOM.elementClose('label')), IncrementalDOM.elementClose('div')));
             IncrementalDOM.elementOpen('ul', null, null, 'class', 'todo-list');
             iDOMHelpers.renderArbitrary(this._getTodos().map(function (todo) {
                 return iDOMHelpers.jsxWrapper(function (_todo$id, _this2$_handleDelete, _this2$_handleTodoCha, _todo) {
@@ -4399,7 +4396,7 @@ var App = function (_Component) {
             }));
             IncrementalDOM.elementClose('ul');
             IncrementalDOM.elementClose('section');
-            IncrementalDOM.elementVoid(_Footer2.default, null, null, 'filters', filters, 'showClearButton', this._anyDone(), 'onClear', this._handleClear, 'onFilterChange', this._handleFilterChange, 'selectedFilter', this.state.selectedFilter, 'todoCount', this._countLeft());
+            iDOMHelpers.renderArbitrary(!!this.state.todos.length && IncrementalDOM.elementVoid(_Footer2.default, null, null, 'filters', filters, 'showClearButton', this._anyDone(), 'onClear', this._handleClear, 'onFilterChange', this._handleFilterChange, 'selectedFilter', this.state.selectedFilter, 'todoCount', this._countLeft()));
             return IncrementalDOM.elementClose('section');
         }
     }]);
