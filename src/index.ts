@@ -6,6 +6,6 @@ import Component from 'metal-jsx'
 Component.render(
   App,
   {
-    element: document.getElementById('#app')
+    element: document.getElementById('app')
   }
 )
