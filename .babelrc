@@ -1,6 +1,6 @@
 {
   "presets": [
     "metal-jsx",
-    "es2015"
+    "env"
   ]
 }

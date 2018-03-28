@@ -50,5 +50,5 @@ Create.PROPS = {
 }
 
 Create.STATE = {
-  content: ''
+  content: {}
 }
